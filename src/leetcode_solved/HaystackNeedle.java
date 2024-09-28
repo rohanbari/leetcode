@@ -17,25 +17,13 @@
 package leetcode_solved;
 
 /**
- * Question 2: https://leetcode.com/problems/palindrome-number/description/
+ * Question 28:
+ * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
  */
-public class PalindromeNumber {
+public class HaystackNeedle {
 
-    public boolean isPalindrome(int x) {
-        // Negative integers are not palindrome here and multiplier of 10s
-        if (x < 0 || (x != 0 && x % 10 == 0)) {
-            return false;
-        }
-
-        // To store the reverse
-        int rev = 0;
-
-        while (x > rev) {
-            rev = rev * 10 + x % 10;
-            x /= 10;
-        }
-
-        return (x == rev || x == rev / 10);
+    public int strStr(String haystack, String needle) {
+        return haystack.indexOf(needle);
     }
 
     /**
@@ -44,8 +32,7 @@ public class PalindromeNumber {
      * @param args System arguments
      */
     public static void main(String[] args) {
-        System.out.println(new PalindromeNumber().isPalindrome(121));
-        System.out.println(new PalindromeNumber().isPalindrome(-121));
-        System.out.println(new PalindromeNumber().isPalindrome(10));
+        System.out.println(new HaystackNeedle().strStr("sadbutsad", "sad"));
+        System.out.println(new HaystackNeedle().strStr("leetcode", "leeto"));
     }
 }

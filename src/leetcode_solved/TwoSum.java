@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Question 1: https://leetcode.com/problems/two-sum/
+ * Question 1: https://leetcode.com/problems/two-sum/description/
  */
 public class TwoSum {
 
